@@ -121,6 +121,10 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+                'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider',
+                'Chumper\Datatable\DatatableServiceProvider',
+                'Baum\BaumServiceProvider',
 
 	),
 
@@ -188,6 +192,7 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
+                'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade',
 
 	),
 
