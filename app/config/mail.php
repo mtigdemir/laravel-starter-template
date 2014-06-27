@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'sms@trollgate.com', 'name' => 'Trollgate Company'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -80,7 +80,7 @@ return array(
 	|
 	*/
 
-	'username' => null,
+	'username' => 'postmaster@sandbox369791040dde4153827a639295e9f84a.mailgun.org',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -93,7 +93,7 @@ return array(
 	|
 	*/
 
-	'password' => null,
+	'password' => '0qmhj1gx3jk8',
 
 	/*
 	|--------------------------------------------------------------------------
