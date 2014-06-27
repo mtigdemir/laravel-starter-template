@@ -20,6 +20,8 @@ Route::group(array('before' => 'auth'), function() {
     Route::controller('user', 'UserController');
 });
 
+Route::controller('password', 'RemindersController');
+
 /*App::missing(function($exception) {
     return Response::view('errors.missing', array(), 404);
 });
