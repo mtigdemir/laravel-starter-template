@@ -87,6 +87,8 @@ return array(
 			'rule-name' => 'custom-message',
 		),
 	),
+	
+	"alpha_spaces"     => "The :attribute may only contain letters and spaces.",
 
 	/*
 	|--------------------------------------------------------------------------
