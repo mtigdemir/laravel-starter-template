@@ -40,6 +40,19 @@ class Elegant extends Eloquent {
         }
         return $this->save();
     }
+    
+    public function  setExistValues($data , $isSame = false) {
+        foreach($data as $key => $value){
+            if(Input::has($value)){
+                if($isSame){
+                    $this->$value = Input::get($value);
+                }else {
+                    $this->$key = Input::get($value);
+                }
+                
+            }
+        }
+    }
  
     private function getDbColumns() {
         $fields = DB::select("SHOW COLUMNS FROM ".$this->table);
