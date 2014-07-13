@@ -2,16 +2,38 @@
 use Baum\Node;
 
 /**
-* Category
-*/
-class Category extends Node {
+ * Category
+ *
+ * @property integer $id
+ * @property integer $parent_id
+ * @property integer $lft
+ * @property integer $rgt
+ * @property integer $depth
+ * @property \Carbon\Carbon $created_at
+ * @property \Carbon\Carbon $updated_at
+ * @property-read \get_class($this $parent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\get_class($this[] $children
+ * @method static \Baum\Node withoutNode($node) 
+ * @method static \Baum\Node withoutSelf() 
+ * @method static \Baum\Node withoutRoot() 
+ */
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
 
+class Category extends Node implements SluggableInterface {
+
+    use SluggableTrait;
   /**
    * Table name.
    *
    * @var string
    */
   protected $table = 'categories';
+  
+  protected $sluggable = array(
+            'build_from' => 'name',
+            'save_to'    => 'slug',
+        );
 
   //////////////////////////////////////////////////////////////////////////////
 

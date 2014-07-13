@@ -5,7 +5,12 @@
  *
  * @author DOWN
  */
-class Elegant extends Eloquent {
+use Cviebrock\EloquentSluggable\SluggableInterface;
+use Cviebrock\EloquentSluggable\SluggableTrait;
+
+class Elegant extends Eloquent implements SluggableInterface{
+ 
+    use SluggableTrait;
     
     public $blacklist = [];
     public $errors = [];

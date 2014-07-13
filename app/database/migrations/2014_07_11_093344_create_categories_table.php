@@ -17,6 +17,8 @@ class CreateCategoriesTable extends Migration {
       // in the model.
       // Take a look at the model scaffold comments for details.
       $table->increments('id');
+      $table->string('name');
+      $table->string('slug');
       $table->integer('parent_id')->nullable();
       $table->integer('lft')->nullable();
       $table->integer('rgt')->nullable();
