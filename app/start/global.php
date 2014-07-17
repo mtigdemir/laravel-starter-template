@@ -82,3 +82,4 @@ require app_path().'/filters.php';
 
 /*Extended Validators*/
 require app_path().'/validators.php';
+require app_path().'/macros.php';
