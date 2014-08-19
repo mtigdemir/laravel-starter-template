@@ -2,7 +2,7 @@
 
   When I start to a new project with Laravel , some of amazing packages unconditionally necessary for it. That's why I cerate my own starter bundle.
   
-##What is Include Package
+##What is Include Packages
 
   - Laravel Framework 4.2 
   - Laravel IDE Helper 
@@ -10,6 +10,7 @@
   - Chumper Datatable 
   - Baum Nested Category
   - Cviebrock Eloquent Slugable 
+  - Fzaninotto Faker 
   
 
 ##Exist Routes 
