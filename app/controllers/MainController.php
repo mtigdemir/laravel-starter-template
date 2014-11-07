@@ -11,11 +11,7 @@ class MainController extends BaseController {
             $this->layout->content = View::make('pages.home');
         }
     }
-    
-    public function showUser(){
-      
-    }
-
+   
     /* Login */
     public function getLogin() {
         if (Auth::check()) {
@@ -23,6 +19,13 @@ class MainController extends BaseController {
         } else {
             $this->layout->content = View::make('user.login');
         }
+    }
+    
+    /* Login */
+    public function getLogout() {
+        Auth::logout();
+        
+        return Redirect::to('/');
     }
 
     /* Register */
@@ -47,30 +50,37 @@ class MainController extends BaseController {
     /* User Create */
     public function postCreate() {
         $user = new User;
+        
+        $user->email = Input::get('email');
+        $user->username = Input::get('username');
+        $user->password =  Hash::make(Input::get('password'));
 
-        $input = array
-            (
-            'email' => Input::get('email'),
-            'username' => Input::get('username'),
-            'password' => Input::get('password'),
-            'password_confirmation' => Input::get('re-password'),
-        );
-
-        if ($user->validate($input)) {
-
-            $user->email = $input['email'];
-            $user->username = $input['username'];
-            $user->password = Hash::make($input['password']);
-            $user->save();
-
-            return Redirect::to('/login')
-                            ->with('success', Lang::get('static.register_confirm'));
-        } else {
-            return Redirect::to('register')
-                            ->with('message', 'The following errors occurred')
-                            ->withErrors($user->errors)
-                            ->withInput();
+        
+//        $input = array
+//            (
+//            'email' => Input::get('email'),
+//            'username' => Input::get('username'),
+//            'password' => Input::get('password'),
+//            'password_confirmation' => Input::get('re-password'),
+//        );
+        
+        if($user->save()){
+            return Redirect::to('login')->with('success' ,  Lang::get('static.register_confirm'));
         }
+        
+        return Redirect::to('register')
+                    ->withInput()
+                    ->withErrors($user->getErrors());
+
+//        if ($user->validate($input)) {
+//
+//            return Redirect::to('/login')
+//                            ->with('success', Lang::get('static.register_confirm'));
+//        } else {
+//            return Redirect::to('register')
+//                            ->with('message', 'The following errors occurred')
+//                            ->withErrors($user->errors)
+//                            ->withInput();
     }
     
     /* User Sign in */

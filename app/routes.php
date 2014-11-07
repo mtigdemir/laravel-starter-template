@@ -10,6 +10,7 @@ Route::get('category', 'MainController@getCategory');
 /*Route Action Pages*/
 Route::get('register', 'MainController@getRegister');
 Route::get('login', 'MainController@getLogin');
+Route::get('logout', 'MainController@getLogout');
 Route::post('signin', 'MainController@postSignin');
 Route::post('create', 'MainController@postCreate');
 

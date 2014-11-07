@@ -8,10 +8,11 @@
 		"barryvdh/laravel-ide-helper": "1.*",
 		"way/generators": "2.*",
 		"fzaninotto/faker": "1.3.*@dev",
-		"chumper/datatable": "2.*",
+		"chumper/datatable": "dev-master",
 		"baum/baum": "~1.0",
 		"cviebrock/eloquent-sluggable": "2.*",
-		"way/database": "dev-master"
+		"way/database": "dev-master",
+		"doctrine/dbal": "~2.3"
 	},
 	"autoload": {
 		"classmap": [

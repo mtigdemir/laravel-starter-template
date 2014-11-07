@@ -13,9 +13,20 @@ use Baum\Node;
  * @property \Carbon\Carbon $updated_at
  * @property-read \get_class($this $parent
  * @property-read \Illuminate\Database\Eloquent\Collection|\get_class($this[] $children
- * @method static \Baum\Node withoutNode($node) 
- * @method static \Baum\Node withoutSelf() 
- * @method static \Baum\Node withoutRoot() 
+ * @method static \Baum\Node withoutNode($node)
+ * @method static \Baum\Node withoutSelf()
+ * @method static \Baum\Node withoutRoot()
+ * @property string $name
+ * @property string $slug
+ * @method static \Illuminate\Database\Query\Builder|\Category whereId($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereName($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereSlug($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereParentId($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereLft($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereRgt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereDepth($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereCreatedAt($value) 
+ * @method static \Illuminate\Database\Query\Builder|\Category whereUpdatedAt($value) 
  */
 use Cviebrock\EloquentSluggable\SluggableInterface;
 use Cviebrock\EloquentSluggable\SluggableTrait;
