@@ -1,5 +1,27 @@
 <?php
 
+Response::macro('success', function($response = array() , $request = array())
+{
+    $return_array = array("status" => "200" , "success" => true ,  "error_message" => "Success" , "response" => $response);
+    
+    $return_array["request"] = Input::except("_token");
+    if(!is_null($request)){
+        $return_array["request"] = array_merge($request , $return_array["request"]);
+    }
+    
+    return Response::json($return_array);
+});
+
+Response::macro('failed', function($status , $message)
+{
+    return Response::json(array("status" => $status , "success" => false , "error_message" => $message));
+});
+
+Response::macro('not_found', function()
+{
+    return Response::json(array("status" => 404 , "success" => false , "error_message" => "ID Not Found" , "request" => Input::all()));
+});
+
 Form::macro('formField',  function($name, $value='', $label, $class='', $required = false) {
 
     $output = '<div class="form-group">'
