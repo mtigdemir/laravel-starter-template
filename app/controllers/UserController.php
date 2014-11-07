@@ -6,7 +6,6 @@ class UserController extends BaseController {
 
     public function getDashboard() {
         $data['user'] = $user = Auth::user();
-        $data['skills'] = $user->skills()->get();
         $this->layout->content = View::make('user.dashboard')->with($data);
     }
 

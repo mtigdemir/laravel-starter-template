@@ -42,8 +42,9 @@ class User extends \Way\Database\Model implements UserInterface, RemindableInter
      */
     protected $hidden = array('password', 'remember_token');
     protected static $rules = [
-        'email' => 'required',
-        'password' => 'required'
+        'username' => 'required',
+        'email' => 'required|email|unique:users',
+        'password' => 'required',
     ];
 
     public function getRememberToken() {
