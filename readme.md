@@ -11,6 +11,7 @@
   - Baum Nested Category
   - Cviebrock Eloquent Slugable 
   - Fzaninotto Faker 
+  - Jeffrey Way Laravel-Model-Validation
   
 
 ##Exist Routes 
@@ -27,7 +28,7 @@
 ##Exist Models
 
   - User Model 
-  - Elegant Model (This model will make your validation easier)
+  - Way\Database\Model will make Validation easier
   - Seo Model 
   - Category Model
   
