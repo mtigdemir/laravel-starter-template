@@ -1,6 +1,6 @@
 <?php
 
-class Seo extends Eloquent {
+class Seo extends  Way\Database\Model {
     
     protected $table = 'seo';
 

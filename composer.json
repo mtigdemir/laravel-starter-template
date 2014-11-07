@@ -10,7 +10,8 @@
 		"fzaninotto/faker": "1.3.*@dev",
 		"chumper/datatable": "2.*",
 		"baum/baum": "~1.0",
-		"cviebrock/eloquent-sluggable": "2.*"
+		"cviebrock/eloquent-sluggable": "2.*",
+		"way/database": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
