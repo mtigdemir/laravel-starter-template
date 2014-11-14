@@ -1,10 +1,8 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
 use Zizaco\Entrust\HasRole;
+use Zizaco\Confide\ConfideUser;
+use Zizaco\Confide\ConfideUserInterface;
 
 /**
  * User
@@ -24,10 +22,9 @@ use Zizaco\Entrust\HasRole;
  * @method static \Illuminate\Database\Query\Builder|\User whereCreatedAt($value) 
  * @method static \Illuminate\Database\Query\Builder|\User whereUpdatedAt($value) 
  */
-class User extends \Way\Database\Model implements UserInterface, RemindableInterface {
+class User extends Eloquent implements ConfideUserInterface {
 
-    use UserTrait,
-        RemindableTrait , HasRole;    
+    use ConfideUser , HasRole;
 
     /**
      * The database table used by the model.
@@ -47,17 +44,4 @@ class User extends \Way\Database\Model implements UserInterface, RemindableInter
         'email' => 'required|email|unique:users',
         'password' => 'required',
     ];
-
-    public function getRememberToken() {
-        return $this->remember_token;
-    }
-
-    public function setRememberToken($value) {
-        $this->remember_token = $value;
-    }
-
-    public function getRememberTokenName() {
-        return 'remember_token';
-    }
-
 }

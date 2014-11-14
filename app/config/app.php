@@ -122,6 +122,7 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
                 'Zizaco\Entrust\EntrustServiceProvider',
+                'Zizaco\Confide\ServiceProvider',
                 'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
                 'Cviebrock\EloquentSluggable\SluggableServiceProvider',
@@ -195,7 +196,8 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
                 'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade',
-                'Entrust'    => 'Zizaco\Entrust\EntrustFacade',
+                'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
+                'Confide'         => 'Zizaco\Confide\Facade',
 
 	),
 

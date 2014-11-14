@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends BaseController {
+class AController extends BaseController {
 
     protected $layout = 'layouts.master';
 
