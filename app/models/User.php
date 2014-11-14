@@ -4,7 +4,6 @@ use Illuminate\Auth\UserTrait;
 use Illuminate\Auth\UserInterface;
 use Illuminate\Auth\Reminders\RemindableTrait;
 use Illuminate\Auth\Reminders\RemindableInterface;
-use Zizaco\Entrust\HasRole;
 
 /**
  * User
@@ -27,7 +26,7 @@ use Zizaco\Entrust\HasRole;
 class User extends \Way\Database\Model implements UserInterface, RemindableInterface {
 
     use UserTrait,
-        RemindableTrait , HasRole;    
+        RemindableTrait;
 
     /**
      * The database table used by the model.
