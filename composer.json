@@ -12,7 +12,8 @@
 		"baum/baum": "~1.0",
 		"cviebrock/eloquent-sluggable": "2.*",
 		"way/database": "dev-master",
-		"doctrine/dbal": "~2.3"
+		"doctrine/dbal": "~2.3",
+		"zizaco/entrust": "1.2.*@dev"
 	},
 	"autoload": {
 		"classmap": [
