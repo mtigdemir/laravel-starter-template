@@ -13,7 +13,8 @@
 		"cviebrock/eloquent-sluggable": "2.*",
 		"way/database": "dev-master",
 		"doctrine/dbal": "~2.3",
-		"zizaco/entrust": "1.2.*@dev"
+		"zizaco/entrust": "1.2.*@dev",
+		"zizaco/confide": "~4.0@dev"
 	},
 	"autoload": {
 		"classmap": [
