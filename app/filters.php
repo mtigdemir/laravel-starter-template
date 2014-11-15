@@ -88,3 +88,12 @@ Route::filter('csrf', function()
 		throw new Illuminate\Session\TokenMismatchException;
 	}
 });
+
+Route::filter('admin', function()
+{
+    if (! Entrust::hasRole('Admin') ) // Checks the current user
+    {
+        App::abort(404);
+    }
+});
+
