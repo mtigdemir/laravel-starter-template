@@ -9,9 +9,10 @@
  */
 class UsersController extends BaseController
 {
+    protected $layout = 'layouts.default';
     
     public function getDashboard() {
-        
+        $this->layout->content = View::make('user.dashboard');
     }
     /**
      * Displays the form for account creation

@@ -20,4 +20,8 @@ class MainController extends BaseController {
         $this->layout->content = View::make('pages.contact');
     }
     
+    public function getFaq() {
+        $this->layout->content = View::make('pages.faq');
+    }
+    
 }

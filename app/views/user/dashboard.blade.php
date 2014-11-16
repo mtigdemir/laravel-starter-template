@@ -1,1 +1,4 @@
 Dashboard
+{{Auth::user()}}
+
+<br>

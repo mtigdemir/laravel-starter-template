@@ -16,6 +16,7 @@ Route::get('logout', 'UsersController@logout');
 Route::get('/', 'MainController@getIndex');
 Route::get('about', 'MainController@getAbout');
 Route::get('contact', 'MainController@getContact');
+Route::get('faq', 'MainController@getFaq');
 Route::get('category', 'MainController@getCategory');
 
 
