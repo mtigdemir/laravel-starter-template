@@ -129,6 +129,7 @@ return array(
                 'Chumper\Datatable\DatatableServiceProvider',
                 'Baum\BaumServiceProvider',
                 'Mmanos\Social\SocialServiceProvider',
+                'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -200,7 +201,7 @@ return array(
                 'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
                 'Confide'         => 'Zizaco\Confide\Facade',
                 'Social'          => 'Mmanos\Social\Facades\Social',
-
+                'Debugbar'        => 'Barryvdh\Debugbar\Facade',
 	),
 
 );
