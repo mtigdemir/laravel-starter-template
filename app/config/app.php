@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -128,6 +128,7 @@ return array(
                 'Cviebrock\EloquentSluggable\SluggableServiceProvider',
                 'Chumper\Datatable\DatatableServiceProvider',
                 'Baum\BaumServiceProvider',
+                'Mmanos\Social\SocialServiceProvider',
 
 	),
 
@@ -198,6 +199,7 @@ return array(
                 'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade',
                 'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
                 'Confide'         => 'Zizaco\Confide\Facade',
+                'Social'          => 'Mmanos\Social\Facades\Social',
 
 	),
 
