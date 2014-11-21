@@ -111,13 +111,15 @@ return array(
 	*/
 
 	'create_user' => function ($data) {
-		$user = new User;
-		$user->email = array_get($data, 'email');
-		$user->password = Hash::make(Str::random());
-		$user->first_name = array_get($data, 'first_name');
-		$user->save();
-		
-		return $user->id;
+		$user = User::where('email' , array_get($data, 'email'))->first();
+                
+                if(is_null($user)){
+                    $user = new UserSocial();
+                    $user->email = array_get($data, 'email');
+                    $user->password = Hash::make(Str::random());
+                    $user->username = array_get($data, 'first_name');
+                    $user->save();
+                }
 	},
 
 	/*
