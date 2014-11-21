@@ -12,6 +12,10 @@
   - Cviebrock Eloquent Slugable 
   - Fzaninotto Faker 
   - Jeffrey Way Laravel-Model-Validation
+  - Zizaco Confide 
+  - Zizaco Entrust
+  - Laravel Social
+  - Google Re-Captcha
   
 
 ##Exist Routes 
