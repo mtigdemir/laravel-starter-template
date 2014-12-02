@@ -11,5 +11,8 @@ return array(
     "logout" => "Logout",
     "register" => "Register",
     "welcome" => "Welcome",
+    "register"    => "Register",
+    "pricing"   => "Pricing",
+    "contact_us"    => "Contact Us",
     "home" => "Home",
 );
