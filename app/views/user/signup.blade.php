@@ -1,4 +1,5 @@
 <form method="POST" action="{{{ URL::to('users') }}}" accept-charset="UTF-8">
+    @include('errors.general')
     <input type="hidden" name="_token" value="{{{ Session::getToken() }}}">
     <fieldset>
         <div class="form-group">
@@ -17,19 +18,7 @@
             <label for="password_confirmation">{{{ Lang::get('confide::confide.password_confirmation') }}}</label>
             <input class="form-control" placeholder="{{{ Lang::get('confide::confide.password_confirmation') }}}" type="password" name="password_confirmation" id="password_confirmation">
         </div>
-
-        @if (Session::get('error'))
-            <div class="alert alert-error alert-danger">
-                @if (is_array(Session::get('error')))
-                    {{ head(Session::get('error')) }}
-                @endif
-            </div>
-        @endif
-
-        @if (Session::get('notice'))
-            <div class="alert">{{ Session::get('notice') }}</div>
-        @endif
-
+        
         <div class="form-actions form-group">
           <button type="submit" class="btn btn-primary">{{{ Lang::get('confide::confide.signup.submit') }}}</button>
         </div>
