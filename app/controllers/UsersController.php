@@ -9,7 +9,7 @@
  */
 class UsersController extends BaseController
 {
-    protected $layout = 'layouts.default';
+    protected $layout = 'layouts.master';
     
     public function getDashboard() {
         $this->layout->content = View::make('user.dashboard');
@@ -21,7 +21,7 @@ class UsersController extends BaseController
      */
     public function create()
     {
-        return View::make(Config::get('confide::signup_form'));
+        $this->layout->content = View::make(Config::get('confide::signup_form'));
     }
 
     /**
@@ -36,8 +36,7 @@ class UsersController extends BaseController
 
         if ($user->id) {
             if (Config::get('confide::signup_email')) {
-                Mail::queueOn(
-                    Config::get('confide::email_queue'),
+                Mail::send(
                     Config::get('confide::email_account_confirmation'),
                     compact('user'),
                     function ($message) use ($user) {
@@ -69,7 +68,7 @@ class UsersController extends BaseController
         if (Confide::user()) {
             return Redirect::to('/');
         } else {
-            return View::make(Config::get('confide::login_form'));
+            $this->layout->content = View::make(Config::get('confide::login_form'));
         }
     }
 
@@ -127,7 +126,7 @@ class UsersController extends BaseController
      */
     public function forgotPassword()
     {
-        return View::make(Config::get('confide::forgot_password_form'));
+        $this->layout->content = View::make(Config::get('confide::forgot_password_form'));
     }
 
     /**
@@ -158,7 +157,7 @@ class UsersController extends BaseController
      */
     public function resetPassword($token)
     {
-        return View::make(Config::get('confide::reset_password_form'))
+        $this->layout->content = View::make(Config::get('confide::reset_password_form'))
                 ->with('token', $token);
     }
 
