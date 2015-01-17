@@ -13,7 +13,7 @@ return array(
 	|
 	*/
 
-	'debug' => true,
+	'debug' => false,
 
 	/*
 	|--------------------------------------------------------------------------
@@ -121,11 +121,15 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
+                'Zizaco\Entrust\EntrustServiceProvider',
+                'Zizaco\Confide\ServiceProvider',
                 'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
                 'Cviebrock\EloquentSluggable\SluggableServiceProvider',
                 'Chumper\Datatable\DatatableServiceProvider',
                 'Baum\BaumServiceProvider',
+                'Mmanos\Social\SocialServiceProvider',
+                'Barryvdh\Debugbar\ServiceProvider',
 
 	),
 
@@ -194,7 +198,10 @@ return array(
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
                 'Datatable'       => 'Chumper\Datatable\Facades\DatatableFacade',
-
+                'Entrust'         => 'Zizaco\Entrust\EntrustFacade',
+                'Confide'         => 'Zizaco\Confide\Facade',
+                'Social'          => 'Mmanos\Social\Facades\Social',
+                'Debugbar'        => 'Barryvdh\Debugbar\Facade',
 	),
 
 );

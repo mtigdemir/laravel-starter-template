@@ -7,12 +7,7 @@ class CategoriesTableSeeder extends Seeder {
 
 	public function run()
 	{
-            $rootWeb = Category::create(['name' => 'Ünlü']);
-            $rootWeb = Category::create(['name' => 'Şehir']);
-            $rootWeb = Category::create(['name' => 'Sporcu']);
-            $rootWeb = Category::create(['name' => 'Araba']);
-            $rootWeb = Category::create(['name' => 'Komik']);
-            $rootWeb = Category::create(['name' => 'Diğer']);
+//            $rootWeb = Category::create(['name' => 'Category_Name_Seed']);
 	}
 
 }

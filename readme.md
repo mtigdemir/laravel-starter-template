@@ -12,6 +12,11 @@
   - Cviebrock Eloquent Slugable 
   - Fzaninotto Faker 
   - Jeffrey Way Laravel-Model-Validation
+  - Zizaco Confide 
+  - Zizaco Entrust
+  - Laravel Social
+  - Google Re-Captcha
+  - Debugbar Laravel 
   
 
 ##Exist Routes 
@@ -21,17 +26,26 @@
   - /contact
   - /register 
   - /login
+  - /logout
   - /dashboard
   - /signin
-  - 
+  - /forgot_password
+  - /reset_password
+  - /admin (auth : admin role)
 
 ##Exist Models
 
   - User Model 
+  - User Social Model
   - Way\Database\Model will make Validation easier
   - Seo Model 
-  - Category Model
+  - Category Model 
+  - Role Model 
+  - Permission Model
   
+##Default Role
+  - Admin
+
 ##Exist Views 
 
   - Static Pages folder : pages/*

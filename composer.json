@@ -12,7 +12,12 @@
 		"baum/baum": "~1.0",
 		"cviebrock/eloquent-sluggable": "2.*",
 		"way/database": "dev-master",
-		"doctrine/dbal": "~2.3"
+		"doctrine/dbal": "~2.3",
+		"zizaco/entrust": "1.2.*@dev",
+		"zizaco/confide": "~4.0@dev",
+                "mmanos/laravel-social": "~1.0",
+                "greggilbert/recaptcha": "~1.0",
+		"barryvdh/laravel-debugbar": "~1.8"
 	},
 	"autoload": {
 		"classmap": [

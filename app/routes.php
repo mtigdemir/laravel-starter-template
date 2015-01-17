@@ -1,24 +1,33 @@
 <?php
 
 /* Static Pages */
+// Confide routes
+Route::get('create', 'UsersController@create');
+Route::post('users', 'UsersController@store');
+Route::get('login', 'UsersController@login');
+Route::post('login', 'UsersController@doLogin');
+Route::get('confirm/{code}', 'UsersController@confirm');
+Route::get('forgot_password', 'UsersController@forgotPassword');
+Route::post('forgot_password', 'UsersController@doForgotPassword');
+Route::get('reset_password/{token}', 'UsersController@resetPassword');
+Route::post('reset_password', 'UsersController@doResetPassword');
+Route::get('logout', 'UsersController@logout');
+
 Route::get('/', 'MainController@getIndex');
 Route::get('about', 'MainController@getAbout');
 Route::get('contact', 'MainController@getContact');
+Route::get('faq', 'MainController@getFaq');
 Route::get('category', 'MainController@getCategory');
 
 
-/*Route Action Pages*/
-Route::get('register', 'MainController@getRegister');
-Route::get('login', 'MainController@getLogin');
-Route::get('logout', 'MainController@getLogout');
-Route::post('signin', 'MainController@postSignin');
-Route::post('create', 'MainController@postCreate');
-
-/* NEED AUTH */
+/* Need User AUTH */
 Route::group(array('before' => 'auth'), function() {
-    Route::get('dashboard', 'UserController@getDashboard');
-    Route::get('me', 'UserController@getMe');
-    Route::controller('user', 'UserController');
+    Route::get('dashboard', 'UsersController@getDashboard');
+});
+
+//Need Admin Auth
+Route::group(array('before' => 'auth|admin'), function() {
+    Route::controller('admin', 'AdminController');
 });
 
 Route::controller('password', 'RemindersController');
